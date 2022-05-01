@@ -26,6 +26,13 @@
                         <input type="search" id="search" name="search" placeholder=" Search...">
                     </div>
                 </form>
+                <?php
+				    if (isset($_GET['search'])) {
+                        $search = $_GET['search'];
+                        $stmt = $pdo->query("SELECT * FROM `reddit_posts` WHERE title LIKE '%$search%' OR selftext LIKE '%$search%'");
+                        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    }
+				?>
             </div>
             <ul class="right_container">
                 <li class="latest">
@@ -69,7 +76,7 @@
         
         <!-- De aici iau datele din reddit_posts -->
         <?php
-            $stmt = $mysql->prepare('SELECT title, selftext FROM `reddit_posts` LIMIT 6');
+            $stmt = $mysql->prepare('SELECT title, SUBSTRING_INDEX(selftext, ".", 2), score FROM `reddit_posts` ORDER BY score DESC LIMIT 2');
             $stmt->execute();
             $result = $stmt->get_result();
             while ($row = $result->fetch_assoc()):
@@ -77,7 +84,33 @@
 
         <div class="most_reviewed">
             <h3> <?php echo $row['title'] ?> </h3>
-            <p class="description"> <?php echo $row['selftext'] ?> </p>
+            <p class="description"> <?php echo $row['SUBSTRING_INDEX(selftext, ".", 2)'] ?> </p>
+        </div>
+        <?php endwhile; ?>
+
+        <?php
+            $stmt = $mysql->prepare('SELECT SUBSTRING_INDEX(text, ".", 2), retweets FROM `twitter_posts` ORDER BY retweets DESC LIMIT 2');
+            $stmt->execute();
+            $result = $stmt->get_result();
+            while ($row = $result->fetch_assoc()):
+        ?>
+
+        <div class="most_reviewed">
+            <!-- <h3>Title</h3> -->
+            <p class="description"> <?php echo $row['SUBSTRING_INDEX(text, ".", 2)'] ?> </p>
+        </div>
+        <?php endwhile; ?>
+
+        <?php
+            $stmt = $mysql->prepare('SELECT title, SUBSTRING_INDEX(description, ".", 2), likes FROM `youtube_videos` ORDER BY likes LIMIT 2');
+            $stmt->execute();
+            $result = $stmt->get_result();
+            while ($row = $result->fetch_assoc()):
+        ?>
+
+        <div class="most_reviewed">
+            <h3> <?php echo $row['title'] ?> </h3>
+            <p class="description"> <?php echo $row['SUBSTRING_INDEX(description, ".", 2)'] ?> </p>
         </div>
         <?php endwhile; ?>
 
@@ -90,15 +123,15 @@
         <h2 class="twitter">Twitter</h2>
         <div class="twitter">
             <?php
-                $stmt = $mysql->prepare('SELECT * FROM `twitter_posts` LIMIT 6');
+                $stmt = $mysql->prepare('SELECT SUBSTRING_INDEX(text, ".", 2), retweets FROM `twitter_posts` ORDER BY retweets DESC LIMIT 6');
                 $stmt->execute();
                 $result = $stmt->get_result();
                 while ($row = $result->fetch_assoc()):
             ?>
 
             <div class="twitter_post">
-                <h3>Title</h3>
-                <p class="description"> <?php echo $row['text'] ?> </p>
+                <!-- <h3>Title</h3> -->
+                <p class="description"> <?php echo $row['SUBSTRING_INDEX(text, ".", 2)'] ?> </p>
             </div>
             <?php endwhile; ?>
         </div>
@@ -107,7 +140,7 @@
         <h2 class="reddit">Reddit</h2>
         <div class="reddit">
             <?php
-                $stmt = $mysql->prepare('SELECT title, selftext FROM `reddit_posts` LIMIT 6');
+                $stmt = $mysql->prepare('SELECT title, SUBSTRING_INDEX(selftext, ".", 2), score FROM `reddit_posts` ORDER BY score DESC LIMIT 6');
                 $stmt->execute();
                 $result = $stmt->get_result();
                 while ($row = $result->fetch_assoc()):
@@ -115,7 +148,7 @@
         
             <div class="reddit_post">
                 <h3> <?php echo $row['title'] ?> </h3>
-                <p class="description"> <?php echo $row['selftext'] ?> </p>
+                <p class="description"> <?php echo $row['SUBSTRING_INDEX(selftext, ".", 2)'] ?> </p>
             </div>
             <?php endwhile; ?>
         </div>
@@ -124,7 +157,7 @@
         <h2 class="youtube">YouTube</h2>
         <div class="youtube">
             <?php
-                $stmt = $mysql->prepare('SELECT * FROM `youtube_videos` LIMIT 6');
+                $stmt = $mysql->prepare('SELECT title, SUBSTRING_INDEX(description, ".", 2), likes FROM `youtube_videos` ORDER BY likes LIMIT 6');
                 $stmt->execute();
                 $result = $stmt->get_result();
                 while ($row = $result->fetch_assoc()):
@@ -132,7 +165,7 @@
 
             <div class="youtube_post">
                 <h3> <?php echo $row['title'] ?> </h3>
-                <p class="description"> <?php echo $row['description'] ?> </p>
+                <p class="description"> <?php echo $row['SUBSTRING_INDEX(description, ".", 2)'] ?> </p>
             </div>
             <?php endwhile; ?>
         </div>
