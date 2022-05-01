@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/general.css" rel="stylesheet">
     <link href="styles/homepage.css" rel="stylesheet">
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/responsive.js" defer></script>
+    <script src="scripts/darktheme.js" defer></script>
+    <script src="scripts/homepage.js" defer></script>
     <title>Site name</title>
 </head>
 
@@ -36,7 +38,11 @@
                 </li>
             </ul>
             <div class="change_theme">
-                <input type="checkbox" class="change_theme" id="change_theme">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label class="label_for_checkbox" for="checkbox">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </label>
             </div>
             <a href="https://www.info.uaic.ro" class="faculty" target="_blank"> <img src="images/logo-fii.png"
                     alt="University logo" class="faculty_logo">
@@ -47,9 +53,6 @@
             <img src="images/search.png" alt="" class="search-btn">
 
         </nav>
-        <!-- <div class="news">
-            <p>Check out our latest post here!</p>
-        </div>-->
     </header>
 
     <main>
@@ -171,6 +174,9 @@
                         officiis illo doloribus, ea labore quo soluta modi.
                     </p>
                 </div>
+                <div class="see_all">
+                    <a class="twitter_see_all" href="/seeallposts.html" id="twitter_see_all">See all</a>
+                </div>
             </div>
 
 
@@ -230,6 +236,9 @@
                         officiis illo doloribus, ea labore quo soluta modi.
                     </p>
                 </div>
+                <div class="see_all">
+                    <a class="reddit_see_all" href="/seeallposts.html" id="reddit_see_all">See all</a>
+                </div>
             </div>
 
 
@@ -288,6 +297,9 @@
                         quaerat adipisci quibusdam similique, consectetur blanditiis praesentium repellendus accusamus,
                         officiis illo doloribus, ea labore quo soluta modi.
                     </p>
+                </div>
+                <div class="see_all">
+                    <a class="youtube_see_all" href="/seeallposts.html" id="youtube_see_all">See all</a>
                 </div>
             </div>
         </section>

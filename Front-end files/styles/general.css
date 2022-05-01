@@ -17,14 +17,14 @@ body{
 
 /* top bar */
 header.site_header{
-    border-bottom: 0.05rem solid black;
+    border-bottom: 0.1vh solid black;
 }
 nav.navig_line{
     padding-left: 5vh;
     padding-right: 5vh;
     line-height: 2.5rem;
 
-    border-bottom-width: 0.77rem;
+    border-bottom-width: 2vh;
     border-bottom-color: var(--lightblue);
     border-bottom-style: solid;
 
@@ -51,7 +51,7 @@ div.left_container{
 }
 /* site name / logo */
 div.site_name{
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     text-align: left;
 }
 a.site_name{
@@ -88,9 +88,6 @@ input:hover{
 ul.right_container{
     list-style: none;
     padding: 0rem;
-    border: 0.1rem solid var(--lightgray);
-    border-radius: 1.5rem;
-
     flex-grow: 4;
     /* new flex for future items*/
     display: flex;
@@ -101,9 +98,6 @@ ul.right_container{
 }
 ul.right_container:hover{
     background-color: var(--darkblue);
-    border: 0.1rem solid var(--white);
-    border-radius: 1.5rem;
-
     transition: 200ms;
 }
 li.latest{
@@ -155,12 +149,17 @@ a.menu_option{
 a.menu_option:hover{
     color: var(--white);
 }
-/* theme button */
-div.change_theme input.change_theme{
-    border-radius: 1.5rem;
-    /* to be styled soon */
-    background-color: #FF715B;
+/* theme button - to be styled soon */
+div.change_theme input[type=checkbox]{
+    transform: scale(150%);
+    /* opacity: 0; */
 }
+/*
+label.label_for_checkbox{
+}
+input.checkbox:checked + label.label_for_checkbox{
+} 
+*/
 /* faculty logo */
 a.faculty{
     background-color: var(--white);
@@ -212,7 +211,7 @@ footer.footer{
     display: none;
 }
 
-@media (max-width: 850px){
+@media (max-width: 900px){
     nav {
         padding: 0rem;
     }
@@ -254,28 +253,32 @@ footer.footer{
     .container li {
         margin:30px auto;
     }
-    
+    div.change_theme{
+        display:none;
+    }
 }
 
 
 /* change theme */
 body.dark-theme{
     background-color: var(--opo_white);
+    transition: all 250ms;
 }
 nav.dark-theme{
     border-bottom-color: var(--pink);
     background-color: var(--opo_white);
+    transition: all 250ms;
 }
 div.dark-theme input[type=search]{
     background-color: var(--opo_post);
     color: var(--white);
+    transition: all 250ms;
 }
 ul.dark-theme{
-    border: 0.1rem solid var(--opo_white);
     background-color: var(--opo_white);
+    transition: all 250ms;
 }
 ul.dark-theme:hover{
-    border: 0.1rem solid var(--opo_white);
     background-color: var(--opo_white);
 }
 li.dark-theme:hover{
@@ -283,12 +286,14 @@ li.dark-theme:hover{
 }
 a.dark-theme{
     color: var(--pink);
+    transition: all 250ms;
 }
 a.dark-theme:hover{
-    color: var(--pink);
+    color: var(--white);
 }
 footer.dark-theme{
     border-top-color: var(--pink);
     background-color: var(--opo_white);
+    transition: all 250ms;
 }
 
