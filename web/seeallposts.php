@@ -1,3 +1,7 @@
+<?php
+    require "dbconnection.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,7 +66,7 @@
         <h2 class="platform_name" id="platform_name"></h2>
 
         <?php if ("platform_name" == 'Reddit'): ?>
-            <div class="platform">
+            <div class="reddit">
                 <?php
                     $stmt = $mysql->prepare('SELECT title, selftext FROM `reddit_posts`');
                     $stmt->execute();
@@ -70,7 +74,7 @@
                     while ($row = $result->fetch_assoc()):
                 ?>
 
-                <div class="platform_post">
+                <div class="reddit_post">
                     <a class="post" href="post.php">
                         <h3> <?php echo $row['title'] ?> </h3>
                         <p class="description"> <?php echo $row['selftext'] ?> </p>
@@ -81,7 +85,7 @@
         <?php endif; ?>
         
         <?php if ("platform_name" == 'Youtube'): ?>
-            <div class="platform">
+            <div class="youtube">
                 <?php
                     $stmt = $mysql->prepare('SELECT title, description FROM `youtube_videos`');
                     $stmt->execute();
@@ -89,7 +93,7 @@
                     while ($row = $result->fetch_assoc()):
                 ?>
 
-                <div class="platform_post">
+                <div class="youtube_post">
                     <a class="post" href="post.php">
                         <h3> <?php echo $row['title'] ?> </h3>
                         <p class="description"> <?php echo $row['description'] ?> </p>
@@ -100,7 +104,7 @@
         <?php endif; ?>
         
         <?php if ("platform_name" == 'Twitter'): ?>
-        <div class="platform">
+        <div class="twitter">
             <?php
                 $stmt = $mysql->prepare('SELECT text FROM `twitter_posts`');
                 $stmt->execute();
@@ -108,7 +112,7 @@
                 while ($row = $result->fetch_assoc()):
             ?>
 
-            <div class="platform_post">
+            <div class="twitter_post">
                 <a class="post" href="post.php">
                     <p class="description"> <?php echo $row['text'] ?> </p>
                 </a>
