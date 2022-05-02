@@ -25,11 +25,14 @@ h2.titles{
     color: var(--darkblue);
 }
 h3.title{
-    margin: 2.5vh;
+    margin: 0vh;
+    padding: 2.5vh;
     color: black;
 }
 p.description{
-    margin: 2.5vh;
+    margin: 0vh;
+    padding: 2.5vh;
+    padding-top: 0vh;
 }
 h2.twitter{
     margin-top: 2.5vh;
@@ -50,6 +53,10 @@ h2.youtube{
     margin-bottom: 2.5vh;
     background-color: var(--white);
     color: var(--youtube);
+}
+a.post{
+    text-decoration: none;
+    color: black;
 }
 
 /* homepage */
@@ -155,10 +162,18 @@ div.youtube_post:hover{
 
 div.see_all{
     padding: 0vh;
-    margin-top: 2.5vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    width: 100%;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+div.see_all:hover{
+    background: var(--lightgray);
+    border-radius: 1.5rem;
+    transition: 750ms;
 }
 a.twitter_see_all{
     text-decoration: none;
@@ -218,6 +233,12 @@ div.dark-theme-grey{
     background-color: var(--opo_post);
     box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem var(--opo_shadow);
     transition: all 250ms;
+}
+div.dark-theme-grey-overlap{
+    background-color: var(--opo_white);
+}
+div.dark-theme-grey-overlap:hover{
+    background-color: var(--opo_post);
 }
 h3.dark-theme-light-grey{
     color: var(--lightgray);

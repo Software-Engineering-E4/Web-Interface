@@ -8,7 +8,7 @@ change_theme.addEventListener('change',() => {
     var index;
     var list;
     /* header content & footer */
-    list = document.querySelectorAll(".navig_line, .search_bar, .site_name, .right_container, .latest, .categories, .about, .menu_option, .footer");
+    list = document.querySelectorAll(".navig_line, .search_bar, .site_name, .right_container, .latest, .categories, .statistics, .about, .menu_option, .footer");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('dark-theme');
     /* homepage content */
@@ -21,6 +21,9 @@ change_theme.addEventListener('change',() => {
     list = document.querySelectorAll(".most_reviewed_post, .twitter_post, .reddit_post, .youtube_post");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('dark-theme-grey');
+    list = document.querySelectorAll(".see_all");
+    for(index = 0; index < list.length; index++)
+        list[index].classList.toggle('dark-theme-grey-overlap');
     /* seeallposts content */
     list = document.querySelectorAll(".platform_name, .platform");
     for(index = 0; index < list.length; index++)

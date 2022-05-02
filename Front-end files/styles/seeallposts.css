@@ -44,6 +44,10 @@ h3.title{
 p.description{
     margin: 2.5vh;
 }
+a.post{
+    text-decoration: none;
+    color: black;
+}
 
 /* see all categories */
 div.twitter{
