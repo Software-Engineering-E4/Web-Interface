@@ -21,6 +21,7 @@ div.statistics {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    color:black;
     
 }
 p.first_statistics {
@@ -28,4 +29,13 @@ p.first_statistics {
     text-align: center;
     color: black;
     font-size: 1.25rem;
+}
+h2.reddit{
+    color: var(--reddit);
+}
+h2.youtube{
+    color: var(--youtube);
+}
+h2.twitter{
+    color: var(--twitter);
 }
