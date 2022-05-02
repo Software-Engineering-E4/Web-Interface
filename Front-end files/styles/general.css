@@ -142,6 +142,18 @@ li.about:hover{
 
     transition: 400ms;
 }
+li.statistics{
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+li.statistics:hover{
+    background-color: var(--lightblue);
+    color: white;
+    border-radius: 1.5rem;
+    transition: 400ms
+}
 a.menu_option{
     color: var(--lightgray);
     text-decoration: none;
@@ -237,7 +249,7 @@ footer.footer{
         border-bottom-right-radius: 30%;
     
     }
-    .search_bar{
+     .search_bar{
         flex-direction: row;
         width: 100%;
         justify-content: center;
@@ -296,4 +308,3 @@ footer.dark-theme{
     background-color: var(--opo_white);
     transition: all 250ms;
 }
-
