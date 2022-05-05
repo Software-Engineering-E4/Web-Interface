@@ -9,7 +9,8 @@
     <link href="styles/statistics.css" rel="stylesheet">
     <script src="scripts/responsive.js" defer></script>
     <script src="scripts/darktheme.js" defer></script>
-    <script src="scripts/homepage.js" defer></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <title>Site name</title>
 </head>
 
@@ -61,34 +62,38 @@
         <div class="statistics">
             <h2 class="twitter">Twitter</h2>
             <div class="twitter">
-                <p class="statistics">
-                    Statistici pt Twitter:
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque asperiores laudantium
-                    ex
-                    quaerat adipisci quibusdam similique, consectetur blanditiis praesentium repellendus accusamus,
-                    officiis illo doloribus, ea labore quo soluta modi.
-                </p>
+                <div class="chart">
+                    <ul class="values"> <!--vertical-->
+                        <li><span>100%</span></li>
+                        <li><span>50%</span></li>
+                        <li><span>0%</span></li>
+                    </ul>
+                    <ul class="bars">
+                        <li><div class="bar" data-percentage="70"><span>Negative</span></div></li>
+                        <li><div class="bar" data-percentage="20"><span>Positive</span></div></li>
+                        <li><div class="bar" data-percentage="30"><span>Neutral</span></div></li>
+                    </ul>
+                </div>
             </div>
 
             <h2 class="reddit">Reddit</h2>
             <div class="reddit">
-                <p class="statistics">
-                    Statistici pt Reddit:
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque asperiores laudantium
-                    ex
-                    quaerat adipisci quibusdam similique, consectetur blanditiis praesentium repellendus accusamus,
-                    officiis illo doloribus, ea labore quo soluta modi.
-                </p>
+                
             </div>
             <h2 class="youtube">Youtube</h2>
             <div class="youtube">
-                <p class="statistics">
-                    Statistici pt Youtube:
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eaque asperiores laudantium
-                    ex
-                    quaerat adipisci quibusdam similique, consectetur blanditiis praesentium repellendus accusamus,
-                    officiis illo doloribus, ea labore quo soluta modi.
-                </p>
+               
             </div>
+            <!--script desenare bare-->
+            <script type="text/javascript">
+                $(function(){
+                  $('.bars li .bar').each(function(key, bar){
+                    var percentage = $(this).data('percentage');
+                    $(this).animate({
+                      'height' : percentage + '%'
+                    },1000);
+                  });
+                });
+                </script>
         </div>
     </main>
