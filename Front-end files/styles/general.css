@@ -17,6 +17,7 @@ body{
 
 /* top bar */
 header.site_header{
+    margin: 0vh;
     border-bottom: 0.1vh solid black;
 }
 nav.navig_line{
