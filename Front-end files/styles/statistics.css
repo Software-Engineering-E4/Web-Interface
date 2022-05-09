@@ -16,21 +16,30 @@
     --pink: #E75480;
 }
 
-div.statistics {
+div.statistics-twitter {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    color:black;
-    
+      
+}
+div.statistics-reddit {
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
     
 }
-p.first_statistics {
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    font-size: 1.25rem;
+div.statistics-youtube {
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+    
 }
+
 h2.reddit{
     color: var(--reddit);
     justify-content: center;
@@ -49,21 +58,36 @@ div.twitter{
     align-items: center;
 }
 .chart{
+    margin-bottom: 10vh ;
     width: 600px;
     height: 300px;
     display: block;
   }
   
-  .values{
+.twitter .values{
     color: var(--twitter);
     margin: 0;
     padding: 0;
     width: 50px;
     height: 100%;
-    display: inline-block;
-    
+    display: inline-block;   
   }
-  
+.reddit .values{
+    color: var(--reddit);
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    display: inline-block;   
+  } 
+.youtube .values{
+    color: var(--youtube);
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    display: inline-block;   
+  }
   .values li{
     list-style: none;
     height: 150px;
@@ -79,7 +103,7 @@ div.twitter{
     right: 10px;
   }
   
-  .bars{
+  .twitter .bars {
     color: var(--twitter);
     font-size: 12px;
     font-weight: 600;
@@ -90,8 +114,32 @@ div.twitter{
     width: 500px;
     height: 300px;
     border-radius: 5px;
-    
   }
+  .reddit .bars {
+    color: var(--reddit);
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--reddit);
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px; 
+  }
+  .youtube .bars {
+    color: var(--youtube);
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--youtube);
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px; 
+  }
+ 
   
   .bars li{
     display: table-cell;
