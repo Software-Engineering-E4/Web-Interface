@@ -123,17 +123,22 @@ section.stats_and_review.reddit:hover{
 /* change theme */
 main.dark-theme-dark-grey{
     background-color: var(--opo_white);
+    transition: all 400ms;
 }
 h2.dark-theme-dark-grey{
     background-color: var(--opo_white);
+    transition: all 400ms;
 }
 section.dark-theme-grey{
     background-color: var(--opo_post);
     color: var(--white);
+    transition: all 400ms;
 }
 h3.dark-theme-light-grey{
     color: var(--lightgray);
+    transition: all 400ms;
 }
 p.dark-theme-light-grey{
     color: var(--lightgray);
+    transition: all 400ms;
 }

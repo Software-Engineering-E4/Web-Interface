@@ -1,4 +1,5 @@
-var checkedOrNot = localStorage.getItem("vChecked");
+/* to be done... */
+/*var checkedOrNot = localStorage.getItem("vChecked");
     if (checkedOrNot === 'true') {
 
             document.body.classList.toggle('dark-theme');
@@ -6,11 +7,11 @@ var checkedOrNot = localStorage.getItem("vChecked");
             var index;
             var list;
             /* header content & footer */
-            list = document.querySelectorAll(".navig_line, .search_bar, .site_name, .right_container, .latest, .categories, .statistics, .about, .menu_option, .footer");
+            /*list = document.querySelectorAll(".navig_line, .search_bar, .site_name, .right_container, .latest, .categories, .statistics, .about, .menu_option, .footer");
             for (index = 0; index < list.length; index++)
                 list[index].classList.toggle('dark-theme');
             /* homepage content */
-            list = document.querySelectorAll(".titles, .most_reviewed, .Categories");
+            /*list = document.querySelectorAll(".titles, .most_reviewed, .Categories");
             for (index = 0; index < list.length; index++)
                 list[index].classList.toggle('dark-theme-dark-grey');
             list = document.querySelectorAll(".twitter, .reddit, .youtube");
@@ -23,21 +24,21 @@ var checkedOrNot = localStorage.getItem("vChecked");
             for (index = 0; index < list.length; index++)
                 list[index].classList.toggle('dark-theme-grey-overlap');
             /* seeallposts content */
-            list = document.querySelectorAll(".platform_name, .platform");
+           /* list = document.querySelectorAll(".platform_name, .platform");
             for (index = 0; index < list.length; index++)
                 list[index].classList.toggle('dark-theme-dark-grey');
             list = document.querySelectorAll(".platform_post .twitter_post, .platform_post .reddit_post, .platform_post .youtube_post");
             for (index = 0; index < list.length; index++)
                 list[index].classList.toggle('dark-theme-grey');
             /* twitter post & reddit post */
-            list = document.querySelectorAll(".main, .platform_name .twitter");
+          /*  list = document.querySelectorAll(".main, .platform_name .twitter");
             for (index = 0; index < list.length; index++)
                 list[index].classList.toggle('dark-theme-dark-grey');
             list = document.querySelectorAll(".title_and_description, .stats_and_review");
             for (index = 0; index < list.length; index++)
                 list[index].classList.toggle('dark-theme-grey');
             /* homepage's & seeallposts' text content AND post's text*/
-            list = document.querySelectorAll(".title, .description");
+            /*list = document.querySelectorAll(".title, .description");
             for (index = 0; index < list.length; index++)
                 list[index].classList.toggle('dark-theme-light-grey');
-    }
+    }*/

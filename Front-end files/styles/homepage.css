@@ -227,16 +227,20 @@ a.youtube_see_all{
 h2.dark-theme-dark-grey{
     background-color: var(--opo_white);
     color: var(--lightgray);
+    transition: all 400ms;
 }
 h2.dark-theme-dark-grey-overlap{
     background-color: var(--opo_white);
+    transition: all 400ms;
 }
 section.dark-theme-dark-grey{
     background-color: var(--opo_white);
+    transition: all 400ms;
 }
 div.dark-theme-grey{
     background-color: var(--opo_post);
     box-shadow: 0rem 0rem 0.25rem 0.2rem var(--opo_shadow);
+    transition: all 400ms;
 }
 div.dark-theme-grey:hover{
     box-shadow: 0rem 0rem 0.25rem 0.4rem var(--opo_shadow);
@@ -244,13 +248,16 @@ div.dark-theme-grey:hover{
 }
 div.dark-theme-grey-overlap{
     background-color: var(--opo_white);
+    transition: all 400ms;
 }
 div.dark-theme-grey-overlap:hover{
     background-color: var(--opo_post);
 }
 h3.dark-theme-light-grey{
     color: var(--lightgray);
+    transition: all 400ms;
 }
 p.dark-theme-light-grey{
     color: var(--lightgray);
+    transition: all 400ms;
 }

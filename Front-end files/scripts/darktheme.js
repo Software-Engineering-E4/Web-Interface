@@ -1,16 +1,18 @@
 /* change theme */
-const change_theme = document.getElementById("checkbox");
+const button = document.getElementById("change_theme");
 
-change_theme.addEventListener('change',() => {
-    
+button.addEventListener('click',() => {
+ 
     document.body.classList.toggle('dark-theme');
-    
     var index;
     var list;
     /* header content & footer */
     list = document.querySelectorAll(".navig_line, .search_bar, .site_name, .right_container, .latest, .categories, .statistics, .about, .menu_option, .footer");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('dark-theme');
+    /* div for theme button */
+    btn = document.getElementById("change_theme");
+    btn.classList.toggle('dark-theme-btn');
     /* homepage content */
     list = document.querySelectorAll(".titles, .most_reviewed, .Categories");
     for(index = 0; index < list.length; index++)
@@ -44,10 +46,12 @@ change_theme.addEventListener('change',() => {
         list[index].classList.toggle('dark-theme-light-grey');
     
     /* remember if checkbox is checked or not*/
+    /*
     if(change_theme.checked === true) {
         localStorage.setItem("vChecked", 'true');
     }
     else {
         localStorage.setItem("vChecked", 'false');
     }
+    */
 });
