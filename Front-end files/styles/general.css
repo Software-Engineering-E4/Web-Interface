@@ -275,21 +275,17 @@ footer.footer{
 /* change theme */
 body.dark-theme{
     background-color: var(--opo_white);
-    transition: all 250ms;
 }
 nav.dark-theme{
     border-bottom-color: var(--pink);
     background-color: var(--opo_white);
-    transition: all 250ms;
 }
 div.dark-theme input[type=search]{
     background-color: var(--opo_post);
     color: var(--white);
-    transition: all 250ms;
 }
 ul.dark-theme{
     background-color: var(--opo_white);
-    transition: all 250ms;
 }
 ul.dark-theme:hover{
     background-color: var(--opo_white);
@@ -299,7 +295,6 @@ li.dark-theme:hover{
 }
 a.dark-theme{
     color: var(--pink);
-    transition: all 250ms;
 }
 a.dark-theme:hover{
     color: var(--white);
@@ -307,5 +302,4 @@ a.dark-theme:hover{
 footer.dark-theme{
     border-top-color: var(--pink);
     background-color: var(--opo_white);
-    transition: all 250ms;
 }

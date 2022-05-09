@@ -43,6 +43,11 @@ change_theme.addEventListener('change',() => {
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('dark-theme-light-grey');
     
-    /* remember checkbox is checked*/
-    localStorage.setItem("vChecked", 'true')
+    /* remember if checkbox is checked or not*/
+    if(change_theme.checked === true) {
+        localStorage.setItem("vChecked", 'true');
+    }
+    else {
+        localStorage.setItem("vChecked", 'false');
+    }
 });
