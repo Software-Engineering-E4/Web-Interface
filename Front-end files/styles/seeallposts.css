@@ -38,11 +38,14 @@ h2.youtube{
     color: var(--youtube);
 }
 h3.title{
-    margin: 2.5vh;
+    margin: 0vh;
+    padding: 2.5vh;
     color: black;
 }
 p.description{
-    margin: 2.5vh;
+    margin: 0vh;
+    padding: 2.5vh;
+    padding-top: 0vh;
 }
 a.post{
     text-decoration: none;
