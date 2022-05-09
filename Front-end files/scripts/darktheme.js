@@ -42,4 +42,7 @@ change_theme.addEventListener('change',() => {
     list = document.querySelectorAll(".title, .description");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('dark-theme-light-grey');
+    
+    /* remember checkbox is checked*/
+    localStorage.setItem("vChecked", 'true')
 });
