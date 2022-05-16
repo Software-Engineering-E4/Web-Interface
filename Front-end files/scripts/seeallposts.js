@@ -1,9 +1,22 @@
 /* style the content for every category */
 var optionFromLocalStorage = localStorage.getItem("vLocalStorage");
 var option = optionFromLocalStorage;
+identifyThePlatform();
 
-var twitter = 'twitter';
-if(option === twitter) {
+function identifyThePlatform() {
+    var twitter = 'twitter';
+    if(option === twitter)
+        loadTwitterPosts();
+    var reddit = 'reddit';
+    if(option === reddit)
+        loadRedditPosts();
+    var youtube = 'youtube';
+    if(option === youtube)
+        loadYoutubePosts();
+}
+
+
+function loadTwitterPosts() {
     /* add right title */
     document.getElementById("platform_name").innerHTML = 'Twitter';
     var elem;
@@ -11,7 +24,7 @@ if(option === twitter) {
     elem.classList.toggle('twitter');
 
     /* add right styled posts */
-    var list;
+    var list; var index;
     list = document.querySelectorAll(".platform");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('twitter');
@@ -24,14 +37,14 @@ if(option === twitter) {
     for(index = 0; index < a.length; index++)
         a[index].setAttribute("href", "twitterpost.html");
 }
-var reddit = 'reddit';
-if(option === reddit) {
+
+function loadRedditPosts() {
     document.getElementById("platform_name").innerHTML = 'Reddit';
     var elem;
     elem = document.querySelector(".platform_name");
     elem.classList.toggle('reddit');
 
-    var list;
+    var list; var index;
     list = document.querySelectorAll(".platform");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('reddit');
@@ -43,18 +56,50 @@ if(option === reddit) {
     for(index = 0; index < a.length; index++)
         a[index].setAttribute("href", "redditpost.html");
 }
-var youtube = 'youtube';
-if(option === youtube) {
+
+function loadYoutubePosts() {
     document.getElementById("platform_name").innerHTML = 'YouTube';
-    var elem;
+    var elem; 
     elem = document.querySelector(".platform_name");
     elem.classList.toggle('youtube');
 
-    var list;
+    var list; var index;
     list = document.querySelectorAll(".platform");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('youtube');
     list = document.querySelectorAll(".platform_post");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('youtube_post');
+        var a = document.querySelectorAll(".post");
+        for(index = 0; index < a.length; index++)
+            a[index].setAttribute("href", "https://www.youtube.com");
+    
+    addHTMLElements();
+
+    removeParagraphs();
+}
+
+function removeParagraphs() {
+    list = document.querySelectorAll(".description");
+    for(index = 0; index < list.length; index++)
+        list[index].remove();
+}
+
+function addHTMLElements() {
+    var list = document.getElementsByClassName('post');
+    for(index = 0; index < list.length; index++) {
+        
+        /* build new HTML elements */
+        const divElement = document.createElement('div');
+        divElement.classList.toggle('for_image');
+        const imgElement = document.createElement('img');
+        imgElement.classList.toggle('youtube_image');
+        imgElement.src = "images/youtube.jpg";
+
+        /* append img to div */
+        divElement.appendChild(imgElement);
+
+        /* append div to a */
+        list[index].appendChild(divElement);
+    }
 }

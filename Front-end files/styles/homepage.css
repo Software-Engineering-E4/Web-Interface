@@ -167,7 +167,7 @@ div.youtube_post:hover{
     transform: scale(1.025);
     transition: 200ms;
 }
-div.description{
+div.for_image{
     padding: 2.5vh;
     padding-bottom: 5vh;
     display: flex;
