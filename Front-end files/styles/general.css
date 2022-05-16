@@ -162,7 +162,7 @@ a.menu_option:hover{
 div.change_theme{
     padding: 0.1rem;
     border-radius: 1.5rem;
-    background-color: var(--lightblue);
+    background-color: var(--darkblue);
     transform: scale(1.35);
     cursor: pointer;
 
@@ -172,12 +172,12 @@ div.change_theme{
     justify-content: space-around;
 }
 div.change_theme:hover{
-    background-color: var(--lightgray);
+    background-color: var(--lightblue);
     transition: 400ms;
 }
 img.sun{
     border-radius: 1.5rem;
-    max-width: 40%;
+    max-width: 50%;
     cursor: pointer;
 }
 img.moon{
@@ -348,7 +348,7 @@ li.dark-theme:hover{
     background-color: var(--opo_shadow);
 }
 div.dark-theme-btn{
-    background-color: var(--pink);
+    background-color: var(--opo_white);
     transition: all 400ms;
 }
 div.dark-theme-btn:hover{
