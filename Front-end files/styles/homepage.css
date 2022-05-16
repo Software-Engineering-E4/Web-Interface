@@ -177,6 +177,7 @@ div.description{
 }
 img.youtube_image{
     max-width: 100%;
+    border-radius: 1.5rem;
 }
 
 div.see_all{
