@@ -24,6 +24,7 @@
                 <div class="site_name">
                     <a class="site_name" href="/index.php">Site name</a>
                 </div>
+
                 <form action="/search.php" method="POST">
                     <div class="search_bar">
                         <input type="search" id="search" name="search" placeholder=" Search...">
@@ -32,7 +33,7 @@
             </div>
 
             <ul class="right_container">
-                <li class="latest">
+                <li class="home">
                     <a class="menu_option" href="index.php"> Home </a>
                 </li>
                 <li class="categories">
@@ -45,6 +46,7 @@
                     <a class="menu_option" href="about.php">About us</a>
                 </li>
             </ul>
+
             <div class="change_theme" id="change_theme">
                 <img src="images/sun.svg" class="sun">
                 <img src="images/moon.svg" class="moon">
@@ -60,6 +62,7 @@
                 <img src="images/menu.png" class="menu-btn">
             </div>
         </nav>
+        
         <div class="phone options">
             <ul class="phone container">
                 <li class="phone_list_element">
@@ -143,8 +146,6 @@
         </div>
         </section>
     </main>
-
-    <hr>
 
     <footer class="footer">
         Footer infos <br>

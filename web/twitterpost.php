@@ -16,6 +16,7 @@
     <script src="scripts/keepingdarktheme.js" defer></script>
     <title>Twitter post</title>
 </head>
+
 <body>
     <header class="site_header">
         <nav class="navig_line">
@@ -23,18 +24,20 @@
                 <div class="site_name">
                     <a class="site_name" href="/index.php">Site name</a>
                 </div>
+
                 <form action="/search.php" method="post">
                     <div class="search_bar">
                         <input type="search" id="search" name="search" placeholder=" Search...">
                     </div>
                 </form>
             </div>
+
             <ul class="right_container">
-                <li class="latest">
+                <li class="home">
                     <a class="menu_option" href="index.php"> Home </a>
                 </li>
                 <li class="categories">
-                    <a class="menu_option" href="index.php#Categories">Categories</a>
+                    <a class="menu_option" href="#Categories">Categories</a>
                 </li>
                 <li class="statistics">
                     <a class="menu_option" href="statistics.php">Statistics</a>
@@ -43,10 +46,12 @@
                     <a class="menu_option" href="about.php">About us</a>
                 </li>
             </ul>
+
             <div class="change_theme" id="change_theme">
                 <img src="images/sun.svg" class="sun">
                 <img src="images/moon.svg" class="moon">
             </div>
+
             <a href="https://www.info.uaic.ro" class="faculty" target="_blank"> <img src="images/logo-fii.png"
                     alt="University logo" class="faculty_logo">
             </a>
@@ -57,13 +62,17 @@
                 <img src="images/menu.png" class="menu-btn">
             </div>
         </nav>
+
         <div class="phone options">
             <ul class="phone container">
                 <li class="phone_list_element">
                     <a class="phone menu_option" href="index.php">Home</a>
                 </li>
                 <li class="phone_list_element">
-                    <a class="phone menu_option" href="index.php#Categories">Categories</a>
+                    <a class="phone menu_option" href="index.php">Latest</a>
+                </li>
+                <li class="phone_list_element">
+                    <a class="phone menu_option" href="#Categories">Categories</a>
                 </li>
                 <li class="phone_list_element">
                     <a class="phone menu_option" href="statistics.php">Statistics</a>
