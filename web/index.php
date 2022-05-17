@@ -207,6 +207,63 @@
             </div>
         </div>
 
+        <!-- Afisarea cu thumbnail la youtube facut froentend => folositi asta
+             <h2 class="youtube">YouTube</h2>
+            <div class="youtube">
+                <div class="youtube_post">
+                    <a class="post" href="https://www.youtube.com" target="_blank">
+                        <h3 class="title">Title</h3>
+                        <div class="for_image">
+                            <img class="youtube_image" src="images/youtube.jpg">
+                        </div>
+                    </a>
+                </div>
+                <div class="youtube_post">
+                    <a class="post" href="https://www.youtube.com" target="_blank">
+                        <h3 class="title">Title</h3>
+                        <div class="for_image">
+                            <img class="youtube_image" src="images/youtube.jpg">
+                        </div>
+                    </a>
+                </div>
+                <div class="youtube_post">
+                    <a class="post" href="https://www.youtube.com" target="_blank">
+                        <h3 class="title">Title</h3>
+                        <div class="for_image">
+                            <img class="youtube_image" src="images/youtube.jpg">
+                        </div>
+                    </a>
+                </div>
+                <div class="youtube_post">
+                    <a class="post" href="https://www.youtube.com" target="_blank">
+                        <h3 class="title">Title</h3>
+                        <div class="for_image">
+                            <img class="youtube_image" src="images/youtube.jpg">
+                        </div>
+                    </a>
+                </div>
+                <div class="youtube_post">
+                    <a class="post" href="https://www.youtube.com" target="_blank">
+                        <h3 class="title">Title</h3>
+                        <div class="for_image">
+                            <img class="youtube_image" src="images/youtube.jpg">
+                        </div>
+                    </a>
+                </div>
+                <div class="youtube_post">
+                    <a class="post" href="https://www.youtube.com" target="_blank">
+                        <h3 class="title">Title</h3>
+                        <div class="for_image">
+                            <img class="youtube_image" src="images/youtube.jpg">
+                        </div>
+                    </a>
+                </div>
+                <div class="see_all">
+                    <a class="youtube_see_all" href="seeallposts.html" id="youtube_see_all">See all</a>
+                </div>
+            </div>
+                -->
+
         </section>
     </main>
 
