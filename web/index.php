@@ -25,7 +25,7 @@
                 <div class="site_name">
                     <a class="site_name" href="/index.php">Site name</a>
                 </div>
-                <form action="/search.php" method="POST">
+                <form action="/search.php" method="post">
                     <div class="search_bar">
                         <input type="search" id="search" name="keyword" placeholder=" Search...">
                     </div>

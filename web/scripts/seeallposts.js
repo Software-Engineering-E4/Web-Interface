@@ -62,10 +62,10 @@ function loadYoutubePosts() {
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('youtube_post');
     var a = document.querySelectorAll(".post");
-    for(index = 0; index < a.length; index++) {
+   /* for(index = 0; index < a.length; index++) {
         a[index].setAttribute("href", "https://www.youtube.com");
         a[index].setAttribute("target", "_blank");
-    }
+    } */
     
     addHTMLElements();
 
