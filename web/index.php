@@ -25,10 +25,9 @@
                 <div class="site_name">
                     <a class="site_name" href="/index.php">Site name</a>
                 </div>
-
-                <form action="/search.php" method="post">
+                <form action="/search.php" method="POST">
                     <div class="search_bar">
-                        <input type="search" id="search" name="keyword" placeholder=" Search..."/>
+                        <input type="search" id="search" name="keyword" placeholder=" Search...">
                     </div>
                 </form>
             </div>
@@ -63,7 +62,6 @@
                 <img src="images/menu.png" class="menu-btn">
             </div>
         </nav>
-
         <div class="phone options">
             <ul class="phone container">
                 <li class="phone_list_element">
@@ -88,33 +86,35 @@
         
         <!-- De aici iau datele din reddit_posts -->
         <?php
-           $stmt = $mysql->prepare('SELECT title, SUBSTRING(selftext, 1, 250), score, id 
-           FROM reddit_posts WHERE selftext IS NOT NULL ORDER BY score DESC LIMIT 2');
+            $stmt = $mysql->prepare('SELECT title, SUBSTRING(selftext, 1, 250), score, id 
+            FROM reddit_posts WHERE selftext IS NOT NULL ORDER BY score DESC LIMIT 2');
             $stmt->execute();
             $result = $stmt->get_result();
             while ($row = $result->fetch_assoc()):
         ?>
-            <div class="most_reviewed_post">
-                <a class="post" id="<?php $row['id'] ?>" href="redditpost.php?id=<?php echo $row['id'] ?>">
-                    <h3> <?php echo $row['title'] ?> </h3>
-                    <p class="description"> <?php echo $row['SUBSTRING(selftext, 1, 250)'] ?> </p>
-                </a>
-            </div>
+
+        <div class="most_reviewed_post">
+            <a class="post" id="<?php $row['id'] ?>" href="redditpost.php?id=<?php echo $row['id'] ?>">
+                <h3> <?php echo $row['title'] ?> </h3>
+                <p class="description"> <?php echo $row['SUBSTRING(selftext, 1, 250)'] ?> </p>
+            </a>
+        </div>
         <?php endwhile; ?>
         
         <!-- De aici iau datele din twitter_posts -->
         <?php
-            $stmt = $mysql->prepare('SELECT SUBSTRING(text, 1, 250), retweets, id 
-            FROM twitter_posts WHERE text IS NOT NULL ORDER BY retweets DESC LIMIT 2');
+            $stmt = $mysql->prepare('SELECT SUBSTRING(text, 1, 250), retweets, id
+             FROM twitter_posts GROUP BY text ORDER BY retweets DESC LIMIT 2');
             $stmt->execute();
             $result = $stmt->get_result();
             while ($row = $result->fetch_assoc()):
         ?>
-            <div class="most_reviewed_post">
-                <a class="post" id="<?php $row['id'] ?>" href="twitterpost.php?id=<?php echo $row['id'] ?>">
-                    <p class="description"> <?php echo $row['SUBSTRING(text, 1, 250)'] ?> </p>
-                </a>
-            </div>
+
+        <div class="most_reviewed_post">
+            <a class="post" id="<?php $row['id'] ?>" href="twitterpost.php?id=<?php echo $row['id'] ?>">
+                <p class="description"> <?php echo $row['SUBSTRING(text, 1, 250)'] ?> </p>
+            </a>
+        </div>
         <?php endwhile; ?>
         
         <!-- De aici iau datele din youtube_videos -->
@@ -134,7 +134,6 @@
                 </a>
             </div>
         <?php endwhile; ?>
-
         </section>
         
         <h2 class="titles" id="Categories">Categories</h2>
@@ -144,17 +143,18 @@
         <h2 class="twitter">Twitter</h2>
         <div class="twitter">
             <?php
-                $stmt = $mysql->prepare('SELECT SUBSTRING(text, 1, 250), retweets, id 
-                FROM twitter_posts GROUP BY text ORDER BY retweets DESC LIMIT 6');
+                $stmt = $mysql->prepare('SELECT SUBSTRING(text, 1, 250), retweets, id
+                 FROM twitter_posts GROUP BY text ORDER BY retweets DESC LIMIT 6');
                 $stmt->execute();
                 $result = $stmt->get_result();
                 while ($row = $result->fetch_assoc()):
             ?>
-                <div class="twitter_post">
-                    <a class="post" id="<?php $row['id'] ?>" href="twitterpost.php?id=<?php echo $row['id'] ?>">
-                        <p class="description"> <?php echo $row['SUBSTRING(text, 1, 250)'] ?> </p>
-                    </a>
-                </div>
+
+            <div class="twitter_post">
+                <a class="post" id="<?php $row['id'] ?>" href="twitterpost.php?id=<?php echo $row['id'] ?>">
+                    <p class="description"> <?php echo $row['SUBSTRING(text, 1, 250)'] ?> </p>
+                </a>
+            </div>
             <?php endwhile; ?>
 
             <div class="see_all">
@@ -172,12 +172,13 @@
                 $result = $stmt->get_result();
                 while ($row = $result->fetch_assoc()):
             ?>
-                <div class="reddit_post">
-                    <a class="post" id="<?php $row['id'] ?>" href="redditpost.php?id=<?php echo $row['id'] ?>">
-                        <h3> <?php echo $row['title'] ?> </h3>
-                        <p class="description"> <?php echo $row['SUBSTRING(selftext, 1, 250)'] ?> </p>
-                    </a>
-                </div>
+        
+            <div class="reddit_post">
+                <a class="post" id="<?php $row['id'] ?>" href="redditpost.php?id=<?php echo $row['id'] ?>">
+                    <h3> <?php echo $row['title'] ?> </h3>
+                    <p class="description"> <?php echo $row['SUBSTRING(selftext, 1, 250)'] ?> </p>
+                </a>
+            </div>
             <?php endwhile; ?>
 
             <div class="see_all">
@@ -188,8 +189,9 @@
         <!-- De aici iau datele din youtube_videos -->
         <h2 class="youtube">YouTube</h2>
         <div class="youtube">
-            <?php
-                $stmt = $mysql->prepare('SELECT title, link, thumbnail, score FROM youtube_videos ORDER BY score LIMIT 6');
+        <?php
+                $stmt = $mysql->prepare('SELECT title, link, thumbnail, score
+                 FROM youtube_videos WHERE title IS NOT NULL ORDER BY score LIMIT 6');
                 $stmt->execute();
                 $result = $stmt->get_result();
                 while ($row = $result->fetch_assoc()):
@@ -203,6 +205,8 @@
                     </a>
                 </div>
             <?php endwhile; ?>
+
+           
 
             <div class="see_all">
                 <a class="youtube_see_all" href="/seeallposts.php?platformName=Youtube" id="youtube_see_all">See all</a>

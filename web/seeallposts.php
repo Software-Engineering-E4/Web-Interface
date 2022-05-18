@@ -12,9 +12,10 @@
     <link href="styles/general.css" rel="stylesheet">
     <link href="styles/seeallposts.css" rel="stylesheet">
     <script src="scripts/responsive.js" defer></script>
-    <script src="scripts/seeallposts.js" defer></script>
     <script src="scripts/darktheme.js" defer></script>
     <script src="scripts/keepingdarktheme.js" defer></script>
+    <script src="scripts/seeallposts.js" defer></script>
+    <script src="scripts/homepage.js" defer></script>
     <title>All posts</title>
 </head>
 
@@ -25,14 +26,12 @@
                 <div class="site_name">
                     <a class="site_name" href="/index.php">Site name</a>
                 </div>
-
                 <form action="/search.php" method="post">
                     <div class="search_bar">
-                        <input type="search" id="search" name="search" placeholder=" Search...">
+                        <input type="search" id="search" name="keyword" placeholder=" Search...">
                     </div>
                 </form>
             </div>
-
             <ul class="right_container">
                 <li class="home">
                     <a class="menu_option" href="index.php"> Home </a>
@@ -47,12 +46,10 @@
                     <a class="menu_option" href="about.php">About us</a>
                 </li>
             </ul>
-
             <div class="change_theme" id="change_theme">
                 <img src="images/sun.svg" class="sun">
                 <img src="images/moon.svg" class="moon">
             </div>
-
             <a href="https://www.info.uaic.ro" class="faculty" target="_blank"> <img src="images/logo-fii.png"
                     alt="University logo" class="faculty_logo">
             </a>
@@ -63,17 +60,13 @@
                 <img src="images/menu.png" class="menu-btn">
             </div>
         </nav>
-
         <div class="phone options">
             <ul class="phone container">
                 <li class="phone_list_element">
                     <a class="phone menu_option" href="index.php">Home</a>
                 </li>
                 <li class="phone_list_element">
-                    <a class="phone menu_option" href="index.php">Latest</a>
-                </li>
-                <li class="phone_list_element">
-                    <a class="phone menu_option" href="#Categories">Categories</a>
+                    <a class="phone menu_option" href="index.php#Categories">Categories</a>
                 </li>
                 <li class="phone_list_element">
                     <a class="phone menu_option" href="statistics.php">Statistics</a>
@@ -96,7 +89,8 @@
         if ($platformName == 'Twitter'): ?>
         <div class="twitter" id="twitter_see_all">
             <?php
-                $stmt = $mysql->prepare('SELECT SUBSTRING(text, 1, 250), retweets, id FROM twitter_posts ORDER BY retweets DESC');
+                $stmt = $mysql->prepare('SELECT SUBSTRING(text, 1, 250), retweets, id
+                 FROM twitter_posts GROUP BY text ORDER BY retweets DESC');
                 $stmt->execute();
                 $result = $stmt->get_result();
                 while ($row = $result->fetch_assoc()):
@@ -118,7 +112,8 @@
         if ($platformName == 'Reddit'): ?>
             <div class="reddit" id="reddit_see_all">
                 <?php
-                    $stmt = $mysql->prepare('SELECT title,SUBSTRING(selftext, 1, 250), score, id FROM reddit_posts ORDER BY score DESC');
+                    $stmt = $mysql->prepare('SELECT title,SUBSTRING(selftext, 1, 250), score, id 
+                    FROM reddit_posts WHERE selftext IS NOT NULL ORDER BY score DESC');
                     $stmt->execute();
                     $result = $stmt->get_result();
                     while ($row = $result->fetch_assoc()):
@@ -141,8 +136,9 @@
 
         if ($platformName == 'Youtube'): ?>
             <div class="youtube" id="youtube_see_all">
-                <?php
-                    $stmt = $mysql->prepare('SELECT title, link, thumbnail, score FROM youtube_videos ORDER BY score');
+            <?php
+                    $stmt = $mysql->prepare('SELECT title, link, thumbnail, score 
+                    FROM youtube_videos WHERE title IS NOT NULL ORDER BY score');
                     $stmt->execute();
                     $result = $stmt->get_result();
                     while ($row = $result->fetch_assoc()):
@@ -158,6 +154,7 @@
                 <?php endwhile; ?>
             </div>
         <?php endif; ?>
+
     </main>
 
     <footer class="footer">
