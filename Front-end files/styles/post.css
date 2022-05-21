@@ -118,7 +118,47 @@ section.stats_and_review.reddit:hover{
     transform: scale(1.025);
     transition: 400ms;
 }
-
+.progress-positive {
+    position: relative;
+    width: 210px;
+    height: 30px;
+    background: var(--reddit-outline);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+.progress-negative {
+    position: relative;
+    width: 210px;
+    height: 30px;
+    background: var(--reddit-outline);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .progress-neutral {
+    position: relative;
+    width: 210px;
+    height: 30px;
+    background: var(--reddit-outline);
+    border-radius: 5px;
+    overflow: hidden;
+  } 
+.progress__fill {
+    width: 0%;
+    height: 100%;
+    background: var(--reddit);
+    transition: all 0.2s;
+  }
+  
+.progress__text {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font: bold 14px "Quicksand", sans-serif;
+    color: #ffffff;
+  }
+  
+  
 
 /* responsive */
 @media (max-width: 800px){
