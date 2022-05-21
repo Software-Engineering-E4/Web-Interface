@@ -9,6 +9,7 @@
     <link href="styles/post.css" rel="stylesheet">
     <script src="scripts/responsive.js" defer></script>
     <script src="scripts/darktheme.js" defer></script>
+    <script src="scripts/feelingbar.js" defer></script>
     <script src="scripts/keepingdarktheme.js" defer></script>
     <title>Twitter post</title>
 </head>
@@ -105,20 +106,28 @@
                 <div class="feelings">
                     <div class="feeling">
                         <h3 class="stats_title">Positive:</h3>
-                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <div class="progress-positive">
+                            <div class="progress__fill"></div>
+                            <span class="progress__text">0%</span>
+                        </div>
                     </div>
                     <div class="feeling">
                         <h3 class="stats_title">Neutral:</h3>
-                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <div class="progress-neutral">
+                            <div class="progress__fill"></div>
+                            <span class="progress__text">0%</span>
+                        </div>
                     </div>
                     <div class="feeling">
                         <h3 class="stats_title">Negative:</h3>
-                        <p class="description">Lorem ipsum dolor sit amet</p>
+                        <div class="progress-negative">
+                            <div class="progress__fill"></div>
+                            <span class="progress__text">0%</span>
+                        </div>
                     </div>
                 </div>
                 <div class=" review">
-                    <h3 class="stats_title">Leave a review here:</h3>
-                    <p class="description">To be done...</p>
+                    
                 </div>
             </section>
         </div>
