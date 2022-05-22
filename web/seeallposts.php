@@ -138,7 +138,7 @@
             <div class="youtube" id="youtube_see_all">
             <?php
                     $stmt = $mysql->prepare('SELECT title, link, thumbnail, score 
-                    FROM youtube_videos WHERE title IS NOT NULL ORDER BY score');
+                    FROM youtube_videos WHERE title IS NOT NULL ORDER BY score DESC');
                     $stmt->execute();
                     $result = $stmt->get_result();
                     while ($row = $result->fetch_assoc()):

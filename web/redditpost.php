@@ -14,6 +14,7 @@
     <script src="scripts/responsive.js" defer></script>
     <script src="scripts/darktheme.js" defer></script>
     <script src="scripts/keepingdarktheme.js" defer></script>
+    <script src="scripts/feelingbar.js" defer></script>
     <title>Reddit post</title>
 </head>
 
@@ -91,6 +92,11 @@
                     if($row['id']!=$idPost):
                         continue;
                     else:
+                        $positive=$row['positive'];
+                        $neutral=$row['neutral'];
+                        $negative=$row['negative'];
+
+                        echo $positive;
             ?>
             <h3 class="title">
                 <?php echo $row['title'] ?>
@@ -103,19 +109,30 @@
             <div class="date">
                 <h3 class="stats_title">Date:</h3>
                 <p class="description"><?php echo $row['created_utc'] ?></p>
-            </div> <!-- to be changed here; adding 2 exxtra sentiments -->
+            </div> 
             <div class="feelings">
                 <div class="feeling">
                     <h3 class="stats_title">Positive:</h3>
-                    <p class="description"><?php echo $row['positive'] ?></p>
+                    <div class="progress-positive">
+                            <div class="progress__fill"></div>
+                            <span class="progress__text">0%</span>
+                            <?php echo '<script> updateProgressBar(document.querySelector(".progress-positive"), $positive); </script>'; ?>
+                        </div>
                 </div>
                 <div class="feeling">
                     <h3 class="stats_title">Neutral:</h3>
-                    <p class="description"><?php echo $row['neutral'] ?></p>
+                    <div class="progress-neutral">
+                            <div class="progress__fill"></div>
+                            <!-- nu se afiseaza bine fata de cum e in html -->
+                            <span class="progress__text"><?php echo $row['neutral'] ?></span>
+                        </div>
                 </div>
                 <div class="feeling">
-                    <h3 class="stats_title">Negative:</h3>
-                    <p class="description"><?php echo $row['negative'] ?></p>
+                    <h3 class="stats_negative">Negative:</h3>
+                    <div class="progress-positive">
+                            <div class="progress__fill"></div>
+                            <span class="progress__text"><?php echo $row['negative'] ?></span>
+                        </div>
                 </div>
             </div>
             <div class=" review">
