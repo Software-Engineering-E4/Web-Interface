@@ -80,7 +80,17 @@ section.title_and_description{
     border-right: 0.05vh solid black;
     background-color: var(--white);
 }
-section.stats_and_review{
+section.stats_and_review.reddit{
+    padding: 2.5vh;
+    padding-top: 0vh;
+    width: 50%;
+    border-top: 0.1vh solid black;
+    border-bottom: 0.1vh solid black;
+    border-left:  0.1vh solid black;
+    border-right: 0.05vh solid black;
+    background-color: var(--white);
+}
+section.stats_and_review.twitter{
     padding: 2.5vh;
     padding-top: 0vh;
     width: 50%;
@@ -106,9 +116,6 @@ section.stats_and_review.twitter:hover{
     transition: 400ms;
 }
 /* just for reddit post */
-section.stats_and_review.reddit{
-    border-radius: 0vh;
-}
 section.title_and_description.reddit:hover{
     border-radius: 1.5rem;
     box-shadow: 0rem 0rem 0.25rem 0.2rem var(--reddit-outline);
@@ -180,10 +187,16 @@ section.comments:hover{
     color: #ffffff;
   }
   
-  
+canvas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    flex-basis: 0;
+}
 
 /* responsive */
-@media (max-width: 800px){
+@media (max-width: 1200px){
     div.content{ 
         display: flex;
         flex-direction: column;
@@ -199,7 +212,12 @@ section.comments:hover{
     section.title_and_description:hover{
         border-radius: 1.5rem;
     }
-    section.stats_and_review{
+    section.stats_and_review.twitter{
+        width: 75%;
+        border-left: 0.1vh solid black;
+        border-radius: 0rem;
+    }
+    section.stats_and_review.reddit{
         width: 75%;
         border-left: 0.1vh solid black;
         border-radius: 0rem;
@@ -207,9 +225,21 @@ section.comments:hover{
     section.stats_and_review:hover{
         border-radius: 1.5rem;
     }
+    section.comments{
+        width: 75%;
+        border-right: 0.1vh solid black;
+        border-radius: 0rem;
+    }
 
 }
-
+@media (max-width: 800px){
+    section.comments{
+        width: 75%;
+        border-right: 0.1vh solid black;
+        border-radius: 0rem;
+    }=
+ 
+}
 /* change theme */
 main.dark-theme-dark-grey{
     background-color: var(--opo_white);
