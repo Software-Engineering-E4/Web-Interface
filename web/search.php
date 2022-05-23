@@ -121,7 +121,7 @@
 
             <div class="reddit_post">
                 <a class="post" id="<?php $row['id'] ?>" href="redditpost.php?id=<?php echo $row['id'] ?>">
-                    <h3> <?php echo $row['title'] ?> </h3>
+                    <h3 class="title"> <?php echo $row['title'] ?> </h3>
                     <p class="description"> <?php echo $row['SUBSTRING(selftext, 1, 250)'] ?> </p>
                 </a>
             </div>
@@ -141,7 +141,7 @@
             ?>
                  <div class="youtube_post">
                     <a class="post" href="<?php echo $row['link'] ?>" target="_blank">
-                        <h3> <?php echo $row['title'] ?> </h3>
+                        <h3 class="title"> <?php echo $row['title'] ?> </h3>
                         <div class="for_image">
                             <img class="youtube_image" src="<?php echo $row['thumbnail'] ?>">
                         </div>
