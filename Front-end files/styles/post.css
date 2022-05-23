@@ -106,9 +106,6 @@ section.stats_and_review.twitter:hover{
     transition: 400ms;
 }
 /* just for reddit post */
-section.stats_and_review.reddit{
-    border-radius: 0vh;
-}
 section.title_and_description.reddit:hover{
     border-radius: 1.5rem;
     box-shadow: 0rem 0rem 0.25rem 0.2rem var(--reddit-outline);
@@ -121,12 +118,17 @@ section.stats_and_review.reddit:hover{
     transform: scale(1.025);
     transition: 400ms;
 }
+div.content_below{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
 section.comments{
     padding: 2.5vh;
     padding-top: 5vh;
     width: 50%;
-    border-top: 0.1vh solid black;
-    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
     border-bottom: 0.1vh solid black;
     border-bottom-right-radius: 1.5rem;
     border-right:  0.1vh solid black;
@@ -138,6 +140,7 @@ section.comments{
 section.comments:hover{
     border-radius: 1.5rem;
     box-shadow: 0rem 0rem 0.25rem 0.2rem var(--reddit-outline);
+    transform: scale(1.025);
     transition: 400ms;
 }
 .progress-positive {
