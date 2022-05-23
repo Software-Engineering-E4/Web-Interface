@@ -53,6 +53,9 @@ a.post{
 }
 
 /* see all categories */
+div.platform{
+    margin-bottom: 2.5vh;
+}
 div.twitter{
     display: flex;
     flex-direction: row;

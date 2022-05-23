@@ -7,8 +7,9 @@ function updateProgressBar(progressBar, value) {
 const myProgressBar1 = document.querySelector(".progress-positive");
 const myProgressBar2 = document.querySelector(".progress-negative");
 const myProgressBar3 = document.querySelector(".progress-neutral");
-/*
 
-updateProgressBar(myProgressBar3, 14);
-updateProgressBar(myProgressBar2, 72);
-updateProgressBar(myProgressBar1, 74);*/
+/*
+updateProgressBar(myProgressBar3, 72);
+updateProgressBar(myProgressBar2, 74);
+updateProgressBar(myProgressBar1, 14);
+*/
