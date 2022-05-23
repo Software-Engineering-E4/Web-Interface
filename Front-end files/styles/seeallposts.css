@@ -134,7 +134,23 @@ img.youtube_image{
 /* responsive */
 @media (max-width:900px){
     div.platform_post{       
+        max-width: 48.3%;
+    }
+}
+@media (max-width: 750px){
+    div.platform_post{
         max-width: 80%;
+    }
+}
+@media (max-width: 550px){
+    h2.twitter{
+        text-align: center;
+    }
+    h2.reddit{
+        text-align: center;
+    }
+    h2.youtube{
+        text-align: center;
     }
 }
 
