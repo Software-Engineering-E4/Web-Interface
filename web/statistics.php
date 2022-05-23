@@ -254,6 +254,10 @@
         </div>
 
             </div>
+            <h2 class="outro">Common words used</h2>
+        <div class="photo">
+            <img class="general" src="images/WordCloud.png">
+        </div>
             <!--script desenare bare-->
             <script type="text/javascript">
                 $(function () {

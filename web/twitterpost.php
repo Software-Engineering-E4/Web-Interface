@@ -77,7 +77,7 @@
 
     <?php $idPost = $_GET['id']; ?>
 
-    <main>
+    <main class="main">
         <h2 class="platform_name twitter">Twitter post</h2>
         <div class="content">
             <section class="title_and_description twitter">
