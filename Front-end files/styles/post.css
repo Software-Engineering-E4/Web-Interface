@@ -80,7 +80,17 @@ section.title_and_description{
     border-right: 0.05vh solid black;
     background-color: var(--white);
 }
-section.stats_and_review{
+section.stats_and_review.reddit{
+    padding: 2.5vh;
+    padding-top: 0vh;
+    width: 50%;
+    border-top: 0.1vh solid black;
+    border-bottom: 0.1vh solid black;
+    border-left:  0.1vh solid black;
+    border-right: 0.05vh solid black;
+    background-color: var(--white);
+}
+section.stats_and_review.twitter{
     padding: 2.5vh;
     padding-top: 0vh;
     width: 50%;
@@ -113,6 +123,26 @@ section.title_and_description.reddit:hover{
     transition: 400ms;
 }
 section.stats_and_review.reddit:hover{
+    border-radius: 1.5rem;
+    box-shadow: 0rem 0rem 0.25rem 0.2rem var(--reddit-outline);
+    transform: scale(1.025);
+    transition: 400ms;
+}
+section.comments{
+    padding: 2.5vh;
+    padding-top: 5vh;
+    width: 50%;
+    border-top: 0.1vh solid black;
+    border-top-right-radius: 1.5rem;
+    border-bottom: 0.1vh solid black;
+    border-bottom-right-radius: 1.5rem;
+    border-right:  0.1vh solid black;
+    border-left: 0.05vh solid black;
+    background-color: var(--white);
+    flex-direction: column;
+    align-items: center;
+}
+section.comments:hover{
     border-radius: 1.5rem;
     box-shadow: 0rem 0rem 0.25rem 0.2rem var(--reddit-outline);
     transform: scale(1.025);
