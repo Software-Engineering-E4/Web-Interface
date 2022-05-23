@@ -139,7 +139,9 @@
 
         </br>
         <!-- See more button -->
-        <input type="button" id="bseemoreitems" value="See more content..." />
+        <div class="see_all">
+            <input class="bseemoreitems" id="bseemoreitems" type="button" value="See more content..." />
+        </div>
 
     </main>
     <footer class="footer">
