@@ -145,7 +145,6 @@ section.comments{
 section.comments:hover{
     border-radius: 1.5rem;
     box-shadow: 0rem 0rem 0.25rem 0.2rem var(--reddit-outline);
-    transform: scale(1.025);
     transition: 400ms;
 }
 .progress-positive {
