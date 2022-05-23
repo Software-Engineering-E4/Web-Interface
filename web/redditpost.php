@@ -36,7 +36,7 @@
                     <a class="menu_option" href="index.php"> Home </a>
                 </li>
                 <li class="categories">
-                    <a class="menu_option" href="#Categories">Categories</a>
+                    <a class="menu_option" href="index.php#Categories">Categories</a>
                 </li>
                 <li class="statistics">
                     <a class="menu_option" href="statistics.php">Statistics</a>
@@ -136,8 +136,7 @@
                 </div>
             </div>
             <div class=" review">
-                <h3 class="stats_title">Leave a review here:</h3>
-                <p class="description">To be done...</p>
+                
             </div>
         </section>
         <?php break; ?>

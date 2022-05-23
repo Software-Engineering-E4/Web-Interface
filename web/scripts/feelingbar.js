@@ -9,6 +9,6 @@ const myProgressBar2 = document.querySelector(".progress-negative");
 const myProgressBar3 = document.querySelector(".progress-neutral");
 /*
 
-updateProgressBar(myProgressBar3, neutral);
-updateProgressBar(myProgressBar2, negative);
-updateProgressBar(myProgressBar1, positive);*/
+updateProgressBar(myProgressBar3, 14);
+updateProgressBar(myProgressBar2, 72);
+updateProgressBar(myProgressBar1, 74);*/
