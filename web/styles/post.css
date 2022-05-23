@@ -142,14 +142,14 @@ section.stats_and_review.reddit:hover{
     border-radius: 5px;
     overflow: hidden;
   } 
-.progress__fill {
+.progress__fill__positive, .progress__fill__neutral, .progress__fill__negative {
     width: 0%;
     height: 100%;
     background: var(--reddit);
     transition: all 0.2s;
   }
   
-.progress__text {
+.progress__text__positive, .progress__text__neutral, .progress__text__negative {
     position: absolute;
     top: 50%;
     right: 5px;

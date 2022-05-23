@@ -15,8 +15,8 @@
     <script src="scripts/responsive.js" defer></script>
     <script src="scripts/darktheme.js" defer></script>
     <script src="scripts/keepingdarktheme.js" defer></script>
-    <script src="scripts/feelingbar.js" defer></script>
     <script src="scripts/chartcomm.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"> </script>
     <title>InfoMed | Reddit post</title>
 </head>
 
@@ -94,11 +94,6 @@
                     if($row['id']!=$idPost):
                         continue;
                     else:
-                        $positive=$row['positive'];
-                        $neutral=$row['neutral'];
-                        $negative=$row['negative'];
-
-                        echo $positive;
             ?>
             <h3 class="title">
                 <?php echo $row['title'] ?>
@@ -116,25 +111,41 @@
                 <div class="feeling">
                     <h3 class="stats_title">Positive:</h3>
                     <div class="progress-positive">
-                            <div class="progress__fill"></div>
-                            <span class="progress__text">0%</span>
-                            <?php echo '<script> updateProgressBar(document.querySelector(".progress-positive"), $positive); </script>'; ?>
-                        </div>
+                        <div class="progress__fill__positive"></div>
+                        <span class="progress__text__positive"></span>
+                    </div>
+                    <script type="text/javascript">
+                        positive = '<?php echo $row['positive']; ?>';
+                        positive_round = Math.round(positive);
+                        document.querySelector(".progress__fill__positive").style.width = `${positive_round}%`;
+                        document.querySelector(".progress__text__positive").textContent = `${positive_round}%`;
+                    </script>
                 </div>
                 <div class="feeling">
                     <h3 class="stats_title">Neutral:</h3>
                     <div class="progress-neutral">
-                            <div class="progress__fill"></div>
-                            <!-- nu se afiseaza bine fata de cum e in html -->
-                            <span class="progress__text"><?php echo $row['neutral'] ?></span>
-                        </div>
+                        <div class="progress__fill__neutral"></div>
+                        <span class="progress__text__neutral"></span>
+                    </div>
+                    <script type="text/javascript">
+                        neutral = '<?php echo $row['neutral']; ?>';
+                        neutral_round = Math.round(neutral);
+                        document.querySelector(".progress__fill__neutral").style.width = `${neutral_round}%`;
+                        document.querySelector(".progress__text__neutral").textContent = `${neutral_round}%`;
+                    </script>
                 </div>
                 <div class="feeling">
                     <h3 class="stats_negative">Negative:</h3>
-                    <div class="progress-positive">
-                            <div class="progress__fill"></div>
-                            <span class="progress__text"><?php echo $row['negative'] ?></span>
-                        </div>
+                    <div class="progress-negative">
+                        <div class="progress__fill__negative"></div>
+                        <span class="progress__text__negative"></span>
+                    </div>
+                    <script type="text/javascript">
+                        negative = '<?php echo $row['negative']; ?>';
+                        negative_round = Math.round(negative);
+                        document.querySelector(".progress__fill__negative").style.width = `${negative_round}%`;
+                        document.querySelector(".progress__text__negative").textContent = `${negative_round}%`;
+                    </script>
                 </div>
             </div>
         </section>
