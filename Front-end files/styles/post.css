@@ -93,13 +93,13 @@ section.stats_and_review{
     background-color: var(--white);
 }
 /* just for twitter post */
-section.title_and_description:hover{
+section.title_and_description.twitter:hover{
     border-radius: 1.5rem;
     box-shadow: 0rem 0rem 0.25rem 0.2rem var(--twitter-outline);
     transform: scale(1.025);
     transition: 400ms;
 }
-section.stats_and_review:hover{
+section.stats_and_review.twitter:hover{
     border-radius: 1.5rem;
     box-shadow: 0rem 0rem 0.25rem 0.2rem var(--twitter-outline);
     transform: scale(1.025);
@@ -109,7 +109,7 @@ section.stats_and_review:hover{
 section.stats_and_review.reddit{
     border-radius: 0vh;
 }
-section.title_and_description:hover{
+section.title_and_description.reddit:hover{
     border-radius: 1.5rem;
     box-shadow: 0rem 0rem 0.25rem 0.2rem var(--reddit-outline);
     transform: scale(1.025);

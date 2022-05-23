@@ -25,7 +25,8 @@ h2.titles{
     color: var(--darkblue);
 }
 h3.title{
-    margin: 2.5vh;
+    margin: 0vh;
+    padding:2.5vh;
     color: black;
 }
 p.description{
