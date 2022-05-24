@@ -337,17 +337,17 @@ a.phone.menu_option:hover{
 
 /* scroll bar */
 ::-webkit-scrollbar{
-    width: 1rem;
+    width: 0.75rem;
 }
 ::-webkit-scrollbar-track{
-    background-color: var(--white);
+    background-color: var(--opo_white);
 }
 ::-webkit-scrollbar-thumb{
     background-color: var(--opo_post);
     border-radius: 1.5rem;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background-color: var(--opo_shadow);
+    background-color: var(--lightgray);
 }
 
 
