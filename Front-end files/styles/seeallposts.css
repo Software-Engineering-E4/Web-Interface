@@ -131,6 +131,35 @@ img.youtube_image{
     max-width: 100%;
     border-radius: 1.5rem;
 }
+div.see_all{
+    margin-top: 2.5vh;
+    padding: 0vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+div.see_all:hover{
+    border-radius: 1.5rem;
+    background-color: var(--lightgray);
+    transition: 750ms;
+}
+p.bseemoreitems{
+    margin: 0vh;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+p.bseemoreitems.twitter{
+    color: var(--twitter);
+}
+p.bseemoreitems.reddit{
+    color: var(--reddit);
+}
+p.bseemoreitems.youtube{
+    color: var(--youtube);
+}
 
 
 

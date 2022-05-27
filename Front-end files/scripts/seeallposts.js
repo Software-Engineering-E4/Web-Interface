@@ -36,6 +36,10 @@ function loadTwitterPosts() {
     var a = document.querySelectorAll(".post");
     for(index = 0; index < a.length; index++)
         a[index].setAttribute("href", "twitterpost.html");
+
+        list = document.querySelectorAll(".bseemoreitems");
+        for(index = 0; index < list.length; index++)
+            list[index].classList.add('twitter');
 }
 
 function loadRedditPosts() {
