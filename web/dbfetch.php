@@ -1,14 +1,6 @@
 <?php
     require "dbconnection.php";
 
-    /*function debug_to_console($data) {
-        $output = $data;
-        if (is_array($output))
-            $output = implode(',', $output);
-    
-        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-    }*/
-
     function fetch_twitter_items($currentLimit, $limit) {
         global $mysql;
         $query = 'SELECT SUBSTRING(text, 1, 250), retweets, id FROM twitter_posts GROUP BY text ORDER BY likes DESC LIMIT '. $currentLimit .',' .$limit.' ';

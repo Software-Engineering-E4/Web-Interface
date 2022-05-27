@@ -77,6 +77,12 @@
                 <li class="phone_list_element">
                     <a class="phone menu_option" href="about.php">About us</a>
                 </li>
+                <li class="phone_list_element change_theme">
+                    <div class="phone change_theme" id="phone_change_theme">
+                        <img src="images/sun.svg" class="phone_sun">
+                        <img src="images/moon.svg" class="phone_moon">
+                    </div>
+                </li>
             </ul>
         </div>
     </header>
@@ -138,6 +144,11 @@
         <?php endwhile; ?>
         </section>
         
+      <!--  <h2 class="outro">Common words used</h2>
+        <div class="photo">
+            <img class="general" src="images/WordCloud.png">
+        </div> -->
+
         <h2 class="titles" id="Categories">Categories</h2>
         <section class="Categories">
 

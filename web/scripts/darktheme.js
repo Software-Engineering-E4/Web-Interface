@@ -1,8 +1,21 @@
 /* change theme status */
 const button = document.getElementById("change_theme");
-
+const buttonPhone = document.getElementById("phone_change_theme");
+/* normal screen */
 button.addEventListener('click',() => {
 
+    // 1st time
+    if(localStorage.getItem("vDark") === null) {
+        localStorage.setItem("vDark", 'true');
+        changeColors();
+    }
+    else {
+        checkAndChangeStatus();
+        changeColors();
+    }
+});
+/* phone screen */
+buttonPhone.addEventListener('click',() => {
     // 1st time
     if(localStorage.getItem("vDark") === null) {
         localStorage.setItem("vDark", 'true');
@@ -22,7 +35,6 @@ function checkAndChangeStatus() {
 }
 
 function  changeColors() {
-
     document.body.classList.toggle('dark-theme');
     var index;
     var list;
@@ -63,4 +75,11 @@ function  changeColors() {
     list = document.querySelectorAll(".title, .description");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('dark-theme-light-grey');
+    /* statistics content */
+    /* to be done */
+
+    /* for phone */
+    list = document.querySelectorAll(".phone.options, .phone.container, .phone_list_element, .phone_list_element.change_theme, .phone.change_theme");
+    for(index = 0; index < list.length; index++)
+        list[index].classList.toggle('dark-theme-phone');
 }

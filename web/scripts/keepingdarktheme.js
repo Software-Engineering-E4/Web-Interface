@@ -5,7 +5,6 @@ var themeStatus = localStorage.getItem("vDark");
     }
 
 function changeColors() {
-
     document.body.classList.toggle('dark-theme');
     var index;
     var list;
@@ -46,4 +45,11 @@ function changeColors() {
     list = document.querySelectorAll(".title, .description");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('dark-theme-light-grey');
+    /* statistics content */
+    /* to be done */
+
+    /* for phone */
+    list = document.querySelectorAll(".phone.options, .phone.container, .phone_list_element, .phone_list_element.change_theme, .phone.change_theme");
+    for(index = 0; index < list.length; index++)
+        list[index].classList.toggle('dark-theme-phone');
 }
