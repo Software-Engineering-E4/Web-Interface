@@ -127,8 +127,8 @@
 
         <!-- De aici iau datele din youtube_videos -->
         <?php
-            $stmt = $mysql->prepare('SELECT title, SUBSTRING(description, 1, 250), link, thumbnail, score 
-            FROM youtube_videos WHERE description IS NOT NULL ORDER BY score LIMIT 2');
+            $stmt = $mysql->prepare('SELECT title, link, thumbnail, score 
+            FROM youtube_videos WHERE description IS NOT NULL ORDER BY score DESC LIMIT 2');
             $stmt->execute();
             $result = $stmt->get_result();
             while ($row = $result->fetch_assoc()):
@@ -204,7 +204,7 @@
         <div class="youtube">
         <?php
                 $stmt = $mysql->prepare('SELECT title, link, thumbnail, score
-                 FROM youtube_videos GROUP BY title HAVING title IS NOT NULL  ORDER BY score DESC LIMIT 6');
+                 FROM youtube_videos WHERE description IS NOT NULL ORDER BY score DESC LIMIT 6');
                 $stmt->execute();
                 $result = $stmt->get_result();
                 while ($row = $result->fetch_assoc()):

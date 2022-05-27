@@ -93,20 +93,17 @@
         <h2 class="titles" id="titles">Search responses</h2>
         <section class="Categories">
         
-        <h2 class="twitter">Twitter</h2>
-        <div class="twitter">
-            <!-- De aici iau datele din twitter_posts pentru search-->
-            <?php
+        <?php
               $q = "SELECT id,SUBSTRING(text, 1, 250) 
               FROM twitter_posts where text LIKE '%$keyword%' GROUP BY text
               ORDER BY retweets DESC LIMIT 12";
               $result = mysqli_query($mysql, $q);
               $rows = mysqli_num_rows($result);
-              if($rows==0) {
-                echo "We are sorry, there are no responses...";
-            }
-              if($rows > 0) :
-               while ($row = mysqli_fetch_assoc($result)): 
+    
+              if($rows > 0) : ?>
+             <h2 class="twitter">Twitter</h2>
+                 <div class="twitter">
+             <?php  while ($row = mysqli_fetch_assoc($result)): 
             ?>
             <div class="twitter_post">
                 <a class="post" id="<?php $row['id'] ?>" href="twitterpost.php?id=<?php echo $row['id'] ?>">
@@ -119,20 +116,17 @@
           ?>
         </div>
 
-        <h2 class="reddit">Reddit</h2>
-        <div class="reddit">
-            <!-- De aici iau datele din reddit_posts pentru search-->
-            <?php
+        <?php
                 $q = "SELECT id,title,SUBSTRING(selftext, 1, 250)
                  FROM reddit_posts where selftext LIKE '%$keyword%' OR title  LIKE '%$keyword%' and selftext IS NOT NULL
                  ORDER BY score DESC LIMIT 12";
                 $result = mysqli_query($mysql, $q);
                 $rows = mysqli_num_rows($result);
-                if($rows==0) {
-                    echo "We are sorry, there are no responses...";
-                }
-                if($rows > 0) :
-                 while ($row = mysqli_fetch_assoc($result)): 
+            
+                if($rows > 0) : ?>
+                <h2 class="reddit">Reddit</h2>
+                  <div class="reddit">
+               <?php  while ($row = mysqli_fetch_assoc($result)): 
             ?>
 
             <div class="reddit_post">
@@ -144,21 +138,17 @@
             <?php endwhile;
             endif; ?>
         </div>
-
-        <h2 class="youtube">YouTube</h2>
-        <div class="youtube">
-            <!-- De aici iau datele din youtube_videos pentru search-->
-            <?php
+        <?php
                 $q = "SELECT title,link,thumbnail 
                 FROM youtube_videos where description LIKE '%$keyword%' OR title  LIKE '%$keyword%' 
                 ORDER BY score DESC LIMIT 12";
                 $result = mysqli_query($mysql, $q);
                 $rows = mysqli_num_rows($result);
-                if($rows==0) {
-                    echo "We are sorry, there are no responses...";
-                }
-                if($rows > 0) :
-                 while ($row = mysqli_fetch_assoc($result)): 
+            
+                if($rows > 0) : ?>
+                 <h2 class="youtube">YouTube</h2>
+                   <div class="youtube">
+               <?php  while ($row = mysqli_fetch_assoc($result)): 
             ?>
                  <div class="youtube_post">
                     <a class="post" href="<?php echo $row['link'] ?>" target="_blank">
