@@ -16,10 +16,32 @@
     --pink: #E75480;
 }
 
+main.statistics{
+  padding-bottom: 20vh;
+}
 
+/* before statistics */
+h2.intro{
+  color: var(--darkblue);
+  margin-top: 5vh;
+  margin-bottom: 4.5vh;
+}
+div.photo{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+img.general{
+  width: 50%;
+  height: 50%;
+}
+
+
+/* statistics */
 h2.twitter{
   color: var(--twitter);
-  margin-top: 5vh;
+  margin-top: 20vh;
   margin-bottom: 4.5vh;
 }
 h2.reddit{
@@ -194,7 +216,19 @@ div.statistics-youtube {
 }
 
 
-/* for photos */
+/* for single photo */
+div.place_for_single_image{
+  margin-top: 15vh;
+  display: flex;
+  justify-content: center;
+}
+img.single_image{
+  width: 500px;
+  height: 400px;
+  border-radius: 0.5rem;
+}
+
+/* for multiple photos */
 div.place_for_slider{
   margin-top: 15vh;
   display: flex;
@@ -272,26 +306,6 @@ div.place_for_slider{
 #radio3Youtube:checked ~ .first{
   margin-left: -40%;
 }
-
-
-
-/* after statistics */
-h2.outro{
-    color: var(--darkblue);
-    margin-top: 20vh;
-    margin-bottom: 4.5vh;
-}
-div.photo{
-    margin-bottom: 5vh;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-}
-img.general{
-    width: 40%;
-    height: 40%;
-}
   
 
   @media (max-width:625px)  {
@@ -321,6 +335,10 @@ img.general{
       margin-left: 20px;;
       width: 50%;
     }
+    img.single_image{
+      width: 400px;
+      height: 300px;
+    }    
     .slider{
       width: 400px;
       height: 300px;
@@ -337,7 +355,7 @@ img.general{
     .navigation{
       width: 400px;
     }
-    h2.outro{
+    h2.intro{
       text-align: center;
     }
     img.general{
@@ -363,20 +381,30 @@ img.general{
       margin-left: 10px;;
       width: 25%;
     }
+    img.single_image{
+      width: 300px;
+      height: 250px;
+    }
     .slider{
       width: 300px;
-      height: 200px;
+      height: 250px;
     }
     .slides{
       width: 500%;
-      height: 200px;
+      height: 250px;
       display: flex;
     }
     .slide img{
       width: 300px;
-      height: 200px;
+      height: 250px;
     }
     .navigation{
       width: 300px;
     }
+  }
+
+
+  /* dark theme */
+  h2.intro.dark-theme{
+    color: var(--lightgray);
   }

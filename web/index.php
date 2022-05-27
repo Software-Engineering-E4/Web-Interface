@@ -102,7 +102,7 @@
 
         <div class="most_reviewed_post">
             <a class="post" id="<?php $row['id'] ?>" href="twitterpost.php?id=<?php echo $row['id'] ?>">
-                <p class="description"> <?php echo $row['SUBSTRING(text, 1, 250)'] ?> </p>
+                <p class="description"> <?php echo $row['SUBSTRING(text, 1, 250)'] . '...'  ?> </p>
             </a>
         </div>
         <?php endwhile; ?>
@@ -119,7 +119,7 @@
         <div class="most_reviewed_post">
             <a class="post" id="<?php $row['id'] ?>" href="redditpost.php?id=<?php echo $row['id'] ?>">
                 <h3 class="title"> <?php echo $row['title'] ?> </h3>
-                <p class="description"> <?php echo $row['SUBSTRING(selftext, 1, 250)'] ?> </p>
+                <p class="description"> <?php echo $row['SUBSTRING(selftext, 1, 250)'] . '...' ?> </p>
             </a>
         </div>
         <?php endwhile; ?>
@@ -165,7 +165,7 @@
 
             <div class="twitter_post">
                 <a class="post" id="<?php $row['id'] ?>" href="twitterpost.php?id=<?php echo $row['id'] ?>">
-                    <p class="description"> <?php echo $row['SUBSTRING(text, 1, 250)'] ?> </p>
+                    <p class="description"> <?php echo $row['SUBSTRING(text, 1, 250)'] . '...' ?> </p>
                 </a>
             </div>
             <?php endwhile; ?>
@@ -189,7 +189,7 @@
             <div class="reddit_post">
                 <a class="post" id="<?php $row['id'] ?>" href="redditpost.php?id=<?php echo $row['id'] ?>">
                     <h3 class="title"> <?php echo $row['title'] ?> </h3>
-                    <p class="description"> <?php echo $row['SUBSTRING(selftext, 1, 250)'] ?> </p>
+                    <p class="description"> <?php echo $row['SUBSTRING(selftext, 1, 250)'] . '...' ?> </p>
                 </a>
             </div>
             <?php endwhile; ?>

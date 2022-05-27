@@ -183,7 +183,13 @@
         $percentageNegativeYoutube = calPercentage($counterNegativeYoutube, $counterAllSentimentsYoutube);
     ?>
 
-    <main>
+    <main class="statistics">
+
+    <h2 class="intro">Common words used</h2>
+        <div class="photo">
+            <img class="general" src="images/WordCloud.png">
+        </div>
+
         <h2 class="twitter">Twitter</h2>
         <div class="statistics-twitter">
             <div class="twitter">
@@ -208,13 +214,10 @@
                 </div>
             </div>
         </div>
-        <div class="place_for_slider">
-           <div class="slider">
-              <div class="slide first">
-              <img src="images/PieChartTwitterPosts.png">
-              </div>
-           </div>
-       </div>
+        <div class="place_for_single_image">
+            <img src="images/PieChartTwitterPosts.png" class="single_image">
+        </div>
+
         <h2 class="reddit">Reddit</h2>
         <div class="statistics-reddit">
 
@@ -318,11 +321,6 @@
             </div>
         </div>
 
-            </div>
-            <h2 class="outro">Common words used</h2>
-        <div class="photo">
-            <img class="general" src="images/WordCloud.png">
-        </div>
             <!--script desenare bare-->
             <script type="text/javascript">
                 $(function () {

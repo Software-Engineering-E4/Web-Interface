@@ -14,7 +14,7 @@
         while ($row = $result->fetch_assoc()) {
             echo '<div class="twitter_post">';
             echo '    <a class="post" id="'.$row['id'].'" href="twitterpost.php?id='.$row['id'].'">';
-            echo '        <p class="description">'.$row['SUBSTRING(text, 1, 250)'].'</p>';
+            echo '        <p class="description">'.$row['SUBSTRING(text, 1, 250)'] . '...' . '</p>';
             echo '    </a>';
             echo '</div>';
         }
@@ -35,7 +35,7 @@
             echo '<div class="reddit_post">';
             echo '    <a class="post" id="<'.$row['id'].'" href="redditpost.php?id='.$row['id'].'">';
             echo '        <h3>'.$row['title'].' </h3>';
-            echo '        <p class="description">'.$row['SUBSTRING(selftext, 1, 250)'].'</p>';
+            echo '        <p class="description">'.$row['SUBSTRING(selftext, 1, 250)'] . '...' . '</p>';
             echo '    </a>';
             echo '</div>';
         }
