@@ -470,6 +470,9 @@ nav.dark-theme{
     background-color: var(--opo_white);
     transition: all 400ms;
 }
+div.search_bar.dark-theme.search_menu{
+    background-color: var(--opo_white);
+}
 div.dark-theme input[type=search]{
     background-color: var(--opo_post);
     color: var(--white);
