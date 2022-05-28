@@ -12,9 +12,14 @@ new Chart("myChart", {
     }]
   },
   options: {
+    legend: {
+      display: false
+    },
     title: {
       display: true,
       text: "Feelings in the comments"
     }
+    
   }
 });
+
