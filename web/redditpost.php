@@ -195,9 +195,9 @@
             $percentageNeutralReddit = calPercentage($counterPositiveReddit, $counterAllSentimentsReddit);
             $percentageNegativeReddit = calPercentage($counterNegativeReddit, $counterAllSentimentsReddit);
           ?>
-        <div class="content_below">
+        <div class="chart">
             <section class="comments">
-                <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                <canvas id="myChart"></canvas>
             </section>
             <script>
                 positive = '<?php echo $percentagePositiveReddit ?>';
@@ -217,6 +217,9 @@
                     }]
                 },
                 options: {
+                    legend: {
+                   display: false
+                    },
                     title: {
                     display: true,
                     text: "Feelings in the comments"
