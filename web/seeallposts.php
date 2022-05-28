@@ -1,14 +1,13 @@
 <?php
-require "dbconnection.php";
-$queries = array();
-parse_str($_SERVER['QUERY_STRING'], $queries);
-$platformName =  $queries['platformName'];
-$content_selector_platform = "#content_see_all";
+    require "dbconnection.php";
+    $queries = array();
+    parse_str($_SERVER['QUERY_STRING'], $queries);
+    $platformName =  $queries['platformName'];
+    $content_selector_platform = "#content_see_all";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,32 +25,32 @@ $content_selector_platform = "#content_see_all";
     <script type="text/javascript">
         $(document).ready(function() {
             currentLimit = 12;
-            $("#bseemoreitems").click(function() {
-                $.ajax({
+            $("#bseemoreitems").click(function() {                
+                $.ajax({    
                     type: "GET",
                     url: "dbfetch.php",
                     <?php
-                    if ($platformName == 'Twitter') {
-                        global $content_selector_platform;
-                        $content_selector_platform = "#twitter_see_all";
-                        echo 'data: {seemoretwitter: currentLimit},';
-                    } else if ($platformName == 'Reddit') {
-                        global $content_selector_platform;
-                        $content_selector_platform = "#reddit_see_all";
-                        echo 'data: {seemorereddit: currentLimit},';
-                    } else if ($platformName == 'Youtube') {
-                        global $content_selector_platform;
-                        $content_selector_platform = "#youtube_see_all";
-                        echo 'data: {seemoreyoutube: currentLimit},';
-                    }
+                        if ($platformName == 'Twitter') {
+                            global $content_selector_platform;
+                            $content_selector_platform = "#twitter_see_all";
+                            echo 'data: {seemoretwitter: currentLimit},';
+                        } else if ($platformName == 'Reddit') {
+                            global $content_selector_platform;
+                            $content_selector_platform = "#reddit_see_all";
+                            echo 'data: {seemorereddit: currentLimit},';
+                        } else if ($platformName == 'Youtube') {
+                            global $content_selector_platform;
+                            $content_selector_platform = "#youtube_see_all";
+                            echo 'data: {seemoreyoutube: currentLimit},';
+                        }
                     ?>
-                    dataType: "html", //expect html to be returned                
-                    success: function(response) {
+                    dataType: "html",                   
+                    success: function(response){
                         <?php
-                        echo '$("' . $content_selector_platform . '").append(response);'
-                        ?>
+                            echo '$("'.$content_selector_platform.'").append(response);'
+                        ?>          
                         currentLimit = currentLimit + 12;
-                        //alert(response);
+                        
                     }
                 });
             });
@@ -90,7 +89,8 @@ $content_selector_platform = "#content_see_all";
                 <img src="images/sun.svg" class="sun">
                 <img src="images/moon.svg" class="moon">
             </div>
-            <a href="https://www.info.uaic.ro" class="faculty" target="_blank"> <img src="images/logo-fii.png" alt="University logo" class="faculty_logo">
+            <a href="https://www.info.uaic.ro" class="faculty" target="_blank"> <img src="images/logo-fii.png"
+                    alt="University logo" class="faculty_logo">
             </a>
 
             <!-- responsive website -->
@@ -125,22 +125,22 @@ $content_selector_platform = "#content_see_all";
 
     <main>
         <h2 class="platform_name" id="platform_name"></h2>
-
+        
         <?php
-        require "dbfetch.php";
-        if ($platformName == 'Twitter') {
-            echo '<div class="twitter" id="twitter_see_all">';
-            display_twitter_items(0);
-            echo '</div>';
-        } else if ($platformName == 'Reddit') {
-            echo '<div class="reddit" id="reddit_see_all">';
-            display_reddit_items(0);
-            echo '</div>';
-        } else if ($platformName == 'Youtube') {
-            echo '<div class="youtube" id="youtube_see_all">';
-            display_youtube_items(0);
-            echo '</div>';
-        }
+            require "dbfetch.php";
+            if ($platformName == 'Twitter') {
+                echo '<div class="twitter" id="twitter_see_all">';
+                display_twitter_items(0);
+                echo '</div>';
+            } else if ($platformName == 'Reddit') {
+                echo '<div class="reddit" id="reddit_see_all">';
+                display_reddit_items(0);
+                echo '</div>';
+            } else if ($platformName == 'Youtube') {
+                echo '<div class="youtube" id="youtube_see_all">';
+                display_youtube_items(0);
+                echo '</div>';
+            }
         ?>
 
         </br>

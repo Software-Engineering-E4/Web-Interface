@@ -43,7 +43,7 @@
 
     function fetch_youtube_items($currentLimit, $limit) {
         global $mysql;
-        $query = 'SELECT title, link, thumbnail, score FROM youtube_videos GROUP BY title HAVING title IS NOT NULL ORDER BY score DESC LIMIT '. $currentLimit .',' .$limit.' ';
+        $query = 'SELECT title, link, thumbnail, score FROM youtube_videos WHERE description IS NOT NULL ORDER BY score DESC LIMIT '. $currentLimit .',' .$limit.' ';
         $stmt = $mysql->prepare($query);
         $stmt->execute();
         $result = $stmt->get_result();
