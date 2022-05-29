@@ -17,4 +17,5 @@
         <p class="description"> <?php echo $row['SUBSTRING(text, 1, 250)'] ?> </p>
     </a>
 </div>
-<?php endwhile; endif; ?>
+<?php endwhile; ?>
+<?php endif; ?>

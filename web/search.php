@@ -141,7 +141,7 @@
             if($rows == 6 ) :
             ?>
             <div class="see_all">
-            <p class="seeMoreTwitter" id="seeMoreTwitter" > See more </p>
+            <a class="twitter_see_all" id="seeMoreTwitter" > See more </a>
         </div>
             <?php endif; endif; ?>
         </div>
@@ -168,7 +168,7 @@
             if($rows == 6 ) :
             ?>
             <div class="see_all">
-            <p class="seeMoreReddit" id="seeMoreReddit">See more</p>
+            <a class="reddit_see_all" id="seeMoreReddit">See more</a>
         </div>
            <?php endif; endif; ?>
         </div>
@@ -196,7 +196,7 @@
             if($rows == 6 ) :
             ?>
             <div class="see_all">
-            <p class="seeMoreYoutube" id="seeMoreYoutube"> See more </p>
+            <a class="youtube_see_all" id="seeMoreYoutube"> See more </a>
         </div>
         <?php endif; endif; ?>
         </div>

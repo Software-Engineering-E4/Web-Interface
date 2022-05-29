@@ -168,7 +168,7 @@
         <?php endif; ?>
         <?php endwhile; ?>
         <?php
-        $q = 'SELECT * FROM reddit_comments WHERE id_post=' ."'" . $idPost . "'" . ' ';
+        $q = 'SELECT * FROM reddit_comments WHERE id_post=' ."'" . $idPost . "'" . ' AND sentiment IS NOT NULL';
         $result = mysqli_query($mysql, $q);
         $rows = mysqli_num_rows($result);
         if($rows > 0) :
