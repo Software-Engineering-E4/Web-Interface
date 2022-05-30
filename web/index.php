@@ -145,7 +145,7 @@
         <?php endwhile; ?>
         </section>
         
-      <!--  <h2 class="outro">Common words used</h2>
+        <!--  <h2 class="outro">Common words used</h2>
         <div class="photo">
             <img class="general" src="images/WordCloud.png">
         </div> -->
