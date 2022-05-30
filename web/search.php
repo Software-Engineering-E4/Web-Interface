@@ -171,7 +171,7 @@
             </div>
 
             <?php if($rows > 0 && $rows == 6) : ?>
-                <div class="see_all">
+                <div class="see_more">
                     <a class="twitter_see_all" id="seeMoreTwitter" > See more </a>
                 </div>
             <?php endif; ?>
@@ -199,7 +199,7 @@
             </div>
 
             <?php if($rows > 0 && $rows == 6) : ?>
-                <div class="see_all">
+                <div class="see_more">
                     <a class="reddit_see_all" id="seeMoreReddit">See more</a>
                 </div>
             <?php endif; ?>
@@ -228,7 +228,7 @@
             </div>
 
             <?php if($rows > 0 && $rows == 6) : ?>
-                <div class="see_all">
+                <div class="see_more">
                     <a class="youtube_see_all" id="seeMoreYoutube"> See more </a>
                 </div> 
             <?php endif; ?>
