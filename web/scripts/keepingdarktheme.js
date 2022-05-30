@@ -62,4 +62,9 @@ function changeColors() {
      list = document.querySelectorAll(".intro");
      for(index = 0; index < list.length; index++)
         list[index].classList.toggle('dark-theme');
+
+     /* about us content */
+     list = document.querySelectorAll(".about_content");
+     for(index = 0; index < list.length; index++)
+         list[index].classList.toggle('dark-theme');
 }
