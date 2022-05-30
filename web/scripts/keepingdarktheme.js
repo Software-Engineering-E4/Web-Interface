@@ -1,5 +1,5 @@
 var themeStatus = localStorage.getItem("vDark");
-    if(themeStatus === 'true') {
+    if(themeStatus === 'true' && themeStatus != null) {
         if(document.body.classList.contains('dark-theme') === false)
             changeColors();
     }
@@ -27,6 +27,10 @@ function changeColors() {
     list = document.querySelectorAll(".see_all");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('dark-theme-grey-overlap');
+    // search content
+    list = document.querySelectorAll(".see_more");
+    for(index = 0; index < list.length; index++)
+        list[index].classList.toggle('dark-theme-grey-overlap'); 
     /* seeallposts content */
     list = document.querySelectorAll(".platform_name, .platform");
     for(index = 0; index < list.length; index++)
