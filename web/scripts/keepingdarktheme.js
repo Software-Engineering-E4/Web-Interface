@@ -38,6 +38,9 @@ function changeColors() {
     list = document.querySelectorAll(".platform_post .twitter_post, .platform_post .reddit_post, .platform_post .youtube_post");
     for(index = 0; index < list.length; index++)
         list[index].classList.toggle('dark-theme-grey');
+        list = document.querySelectorAll(".bseemoreitems");
+        for(index = 0; index < list.length; index++)
+            list[index].classList.toggle('dark-theme-grey');
     /* twitter post & reddit post */
     list = document.querySelectorAll(".main, .platform_name .twitter");
     for(index = 0; index < list.length; index++)
@@ -56,6 +59,7 @@ function changeColors() {
         list[index].classList.toggle('dark-theme-phone');
 
      /* statistics content */
-     list = document.querySelector(".intro");
-     list.classList.toggle('dark-theme');
+     list = document.querySelectorAll(".intro");
+     for(index = 0; index < list.length; index++)
+        list[index].classList.toggle('dark-theme');
 }
